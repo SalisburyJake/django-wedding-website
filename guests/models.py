@@ -56,7 +56,7 @@ MEALS = [
     ('chicken', 'chicken'),
     ('beef', 'beef'),
     ('salmon', 'salmon'),
-    ('vegetarian', 'vegetable'),
+    ('vegetarian', 'vegetarian'),
 ]
 
 
@@ -87,7 +87,7 @@ class Guest(models.Model):
         return 'Guest: {} {}'.format(self.first_name, self.last_name)
 
 class RsvpForm(forms.Form): 
-    rsvp_code = forms.CharField(max_length = 32, help_text="<br><em> This will be your first name and last name with no caps or spaces (e.g. renerjacob) </em>")
+    rsvp_code = forms.CharField(max_length = 32)#, help_text="<br><em> This will be your first name and last name with no caps or spaces (e.g. renerjacob) </em>")
     
     def __str__(self):
         return self.name
